@@ -3,6 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 26
     buildToolsVersion "26.0.2"
+    flavorDimensions "default"
     defaultConfig {
         applicationId "com.kai.currencypal"
         minSdkVersion 19

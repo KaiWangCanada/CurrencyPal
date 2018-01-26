@@ -17,9 +17,9 @@ public enum ExchangeRateManager {
 
     private ExchangeRateDataModel mExchangeRateDataModel;
 
-    public void getExchangeRate(final Callback<ExchangeRateDataModel> callback) {
+    public void getExchangeRate(final String base, final Callback<ExchangeRateDataModel> callback) {
         if (mExchangeRateDataModel == null) {
-            ApiController.ourInstance.getExchangeRate(new Callback<ExchangeRateDataModel>() {
+            ApiController.ourInstance.getExchangeRate(base, new Callback<ExchangeRateDataModel>() {
                 @Override
                 public void onSuccess(ExchangeRateDataModel object) {
                     mExchangeRateDataModel = object;

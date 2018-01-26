@@ -35,6 +35,8 @@ public class ExchangeRateDataModel extends BaseDataModel {
         public double CZK;
         @SerializedName("DKK")
         public double DKK;
+        @SerializedName("EUR")
+        public double EUR;
         @SerializedName("GBP")
         public double GBP;
         @SerializedName("HKD")

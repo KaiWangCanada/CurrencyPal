@@ -67,9 +67,9 @@ public enum ApiController {
         mAppService = retrofit.create(AppService.class);
     }
 
-    public void getExchangeRate(final Callback<ExchangeRateDataModel> callback) {
+    public void getExchangeRate(String base, final Callback<ExchangeRateDataModel> callback) {
 
-        Call<ExchangeRateDataModel> call = mAppService.getExchangeRate();
+        Call<ExchangeRateDataModel> call = mAppService.getExchangeRate(base);
 
         Request<ExchangeRateDataModel> request = new Request<ExchangeRateDataModel>(callback, call);
         request.run();

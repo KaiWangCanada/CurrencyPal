@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">CurrencyPal</string>
+    <string name="launch_title">CurrencyPal</string>
 </resources>

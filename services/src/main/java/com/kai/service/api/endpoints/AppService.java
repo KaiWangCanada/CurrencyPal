@@ -4,6 +4,7 @@ import com.kai.service.api.models.ExchangeRateDataModel;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.Query;
 
 /**
  * AppService
@@ -14,5 +15,5 @@ import retrofit2.http.GET;
  */
 public interface AppService {
     @GET("/latest")
-    Call<ExchangeRateDataModel> getExchangeRate();
+    Call<ExchangeRateDataModel> getExchangeRate(@Query("base") String base);
 }

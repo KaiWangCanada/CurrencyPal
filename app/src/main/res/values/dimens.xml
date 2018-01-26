@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Text size-->
+    <dimen name="text_size_xxl">22sp</dimen>
+    <dimen name="text_size_xl">20sp</dimen>
+    <dimen name="text_size_l">18sp</dimen>
+    <dimen name="text_size_ml">16sp</dimen>
+    <dimen name="text_size_m">14sp</dimen>  <!--default size-->
+    <dimen name="text_size_ms">12sp</dimen>
+    <dimen name="text_size_s">10sp</dimen>
+    <dimen name="text_size_xs">8sp</dimen>
+
+</resources>
