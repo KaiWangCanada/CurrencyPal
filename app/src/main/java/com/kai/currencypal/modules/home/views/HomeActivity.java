@@ -22,6 +22,13 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * HomeActivity
+ *
+ * @author Kai
+ *         Created on 2017-10-18
+ *         Copyright © 2017. All rights reserved.
+ */
 public class HomeActivity extends BaseActivity<HomePresenter> implements AdapterView.OnItemSelectedListener {
 
     private EditText mHomeNumber;   // TODO: 1/29/2018 Optimize soft keyboard, udpate event
