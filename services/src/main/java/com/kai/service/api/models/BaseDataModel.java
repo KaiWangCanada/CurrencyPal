@@ -1,7 +1,5 @@
 package com.kai.service.api.models;
 
-import java.util.HashMap;
-
 /**
  * BaseDataModel
  *
@@ -10,5 +8,5 @@ import java.util.HashMap;
  *         Copyright © 2017. All rights reserved.
  */
 public class BaseDataModel {
-
+    public long updatedTimeMinutes; // Updated minutes
 }

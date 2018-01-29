@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.kai.currencypal.R;
 import com.kai.currencypal.modules.home.models.Rate;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -22,13 +23,11 @@ import java.util.List;
 public class CurrencyRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private Context mContext;
-    private List<Rate> mList;
-    private double mNumber;
+    private DataModel mDataModel = new DataModel();
 
-    public CurrencyRecyclerAdapter(Context context, List<Rate> currencyList, double number) {
+    public CurrencyRecyclerAdapter(Context context, DataModel dataModel) {
         mContext = context;
-        mList = currencyList;
-        mNumber = number;
+        mDataModel = dataModel;
     }
 
     @Override
@@ -41,13 +40,13 @@ public class CurrencyRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.V
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         final ItemViewHolder viewHolder = (ItemViewHolder) holder;
 
-        viewHolder.tvTitle.setText(mList.get(position).currency);
-        viewHolder.tvValue.setText(Double.toString(mList.get(position).rate * mNumber));
+        viewHolder.tvTitle.setText(mDataModel.list.get(position).currency);
+        viewHolder.tvValue.setText(String.format("%1$,.2f", mDataModel.list.get(position).rate * mDataModel.number));
     }
 
     @Override
     public int getItemCount() {
-        return mList.size();
+        return mDataModel.list.size();
     }
 
     class ItemViewHolder extends RecyclerView.ViewHolder {
@@ -58,6 +57,14 @@ public class CurrencyRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.V
             super(itemView);
             this.tvTitle = (TextView) itemView.findViewById(R.id.item_currency_title);
             this.tvValue = (TextView) itemView.findViewById(R.id.item_currency_value);
+        }
+    }
+
+    public static class DataModel {
+        public List<Rate> list = new ArrayList<>();
+        public double number;
+
+        public DataModel() {
         }
     }
 }
